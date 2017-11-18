@@ -3,38 +3,40 @@ html {
   margin: 0; }
 
 body {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
   margin: 0;
-  height: 100%;
+  height: 100vh;
   overflow-y: hidden;
   font-family: 'Lato', sans-serif; }
 
 aside {
-  width: 300px;
   text-align: center;
   padding: 25px;
-  height: 100vh;
-  max-height: 100%;
-  overflow-y: scroll;
+  overflow-y: scroll; }
+
+#cat-conveyor {
   border-right: gray solid 4px; }
-  aside article {
+  #cat-conveyor article {
     cursor: pointer; }
-  aside img {
+  #cat-conveyor img {
     height: 120px;
     width: 120px;
     object-fit: cover;
     border-radius: 2px;
     border: white solid 4px; }
 
+#scoreboard {
+  border-left: gray solid 4px; }
+
 #display-area {
-  text-align: center;
-  width: 100%;
-  height: 100vh; }
+  text-align: center; }
+  #display-area h1 {
+    font-size: 50px; }
 
 #cat-wrapper {
   position: relative;
   margin: auto;
-  margin-top: 100px;
   text-align: center; }
 
 #cat-image {
@@ -42,10 +44,13 @@ aside {
   border-radius: 5px;
   box-shadow: 4px 6px 33px -4px rgba(0, 0, 0, 0.75);
   cursor: pointer;
-  display: block; }
+  width: 70%;
+  max-height: 450px;
+  object-fit: cover; }
 
 #cat-count {
   position: absolute;
+  width: 50%;
   font-size: 150px;
   bottom: 20%;
   left: 0;
@@ -64,4 +69,4 @@ aside {
   color: white;
   cursor: pointer; }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=main.css.map */

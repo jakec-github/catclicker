@@ -4,20 +4,24 @@ html {
 }
 
 body {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
   margin: 0;
-  height: 100%;
+  height: 100vh;
   overflow-y: hidden;
   font-family: 'Lato', sans-serif;
 }
 
 aside {
-  width: 300px;
+  // width: 300px;
   text-align: center;
   padding: 25px;
-  height: 100vh;
-  max-height: 100%;
+  // height: 100vh;
+  // max-height: 100%;
   overflow-y: scroll;
+}
+
+#cat-conveyor {
   border-right: gray solid 4px;
   article {
     cursor: pointer;
@@ -31,16 +35,20 @@ aside {
   }
 }
 
+#scoreboard {
+  border-left: gray solid 4px;
+}
+
 #display-area{
   text-align: center;
-  width: 100%;
-  height: 100vh;
+  h1 {
+    font-size: 50px;
+  }
 }
 
 #cat-wrapper{
   position: relative;
   margin: auto;
-  margin-top: 100px;
   text-align: center;
 }
 
@@ -49,11 +57,14 @@ aside {
   border-radius: 5px;
   box-shadow: 4px 6px 33px -4px rgba(0,0,0,0.75);
   cursor: pointer;
-  display: block;
+  width: 70%;
+  max-height: 450px;
+  object-fit: cover;
 }
 
 #cat-count {
   position: absolute;
+  width: 50%;
   font-size: 150px;
   bottom: 20%;
   left: 0;
